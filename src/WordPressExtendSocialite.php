@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\WordPress;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
