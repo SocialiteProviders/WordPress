@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\WordPress;
 
 use Laravel\Socialite\Two\AbstractProvider;
