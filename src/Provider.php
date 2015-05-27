@@ -55,11 +55,10 @@ class Provider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map(
             [
-                'id'       => $user['ID'],
-                'nickname' => $user['username'],
-                'name'     => $user['display_name'],
-                'email'    => isset($user['email']) ? $user['email'] : null,
-                'avatar'   => $user['avatar_URL'],
+                'id' => $user['ID'], 'nickname' => $user['username'],
+                'name' => $user['display_name'],
+                'email' => array_get($user, 'email'),
+                'avatar' => $user['avatar_URL'],
             ]
         );
     }
