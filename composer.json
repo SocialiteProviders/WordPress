@@ -2,10 +2,10 @@
     "name": "socialiteproviders/wordpress",
     "description": "WordPress OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
-    "authors": {
+    "authors": [{
         "name": "Andy Wendt",
         "email": "andy@awendt.com"
-    },
+    }],
     "require": {
         "php": ">=5.5.0",
         "socialiteproviders/manager": "~1.0"
