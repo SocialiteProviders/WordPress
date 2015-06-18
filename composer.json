@@ -1,24 +1,18 @@
 {
-  "name": "socialiteproviders/wordpress",
-  "description": "WordPress OAuth2 Provider for Laravel Socialite",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "DraperStudio",
-      "email": "hello@draperstud.io"
+    "name": "socialiteproviders/wordpress",
+    "description": "WordPress OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "authors": {
+        "name": "Andy Wendt",
+        "email": "andy@awendt.com"
     },
-    {
-      "name": "Andy Wendt",
-      "email": "andy@awendt.com"
+    "require": {
+        "php": ">=5.5.0",
+        "socialiteproviders/manager": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\WordPress\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.4.0",
-    "socialiteproviders/manager": "0.1.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "SocialiteProviders\\WordPress\\": "src/"
-    }
-  }
 }
