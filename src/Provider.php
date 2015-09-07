@@ -37,7 +37,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function getUserByToken($token)
     {
         $response = $this->getHttpClient()->get(
-            'https://public-api.wordpress.com/rest/v1/me', [
+            'https://public-api.wordpress.com/rest/v1.1/me', [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
             ],
@@ -53,7 +53,8 @@ class Provider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map(
             [
-                'id' => $user['ID'], 'nickname' => $user['username'],
+                'id' => $user['ID'],
+                'nickname' => $user['username'],
                 'name' => $user['display_name'],
                 'email' => array_get($user, 'email'),
                 'avatar' => $user['avatar_URL'],
